@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Misteri del Sud - Official</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: #111;
+            color: #eee;
+        }
+
+        header {
+            background: #000;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 30px;
+            letter-spacing: 2px;
+            color: #f7d57c;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #eee;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #f7d57c;
+        }
+
+        .lang-select {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #222;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+        }
+
+        .hero {
+            background: url("https://images.unsplash.com/photo-1581093448798-5c8bfa61b9f9?auto=format&fit=crop&w=1200&q=60") center/cover no-repeat;
+            height: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            background: rgba(0,0,0,0.7);
+            padding: 20px;
+            border-radius: 10px;
+            color: #f7d57c;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background: #1b1b1b;
+            border: 1px solid #333;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin-top: 10px;
+            color: #f7d57c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #000;
+            margin-top: 20px;
+            color: #888;
+        }
+    </style>
+
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll("[data-it]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + lang);
+            });
+        }
+    </script>
+
+</head>
+<body>
+
+    <select class="lang-select" onchange="changeLanguage(this.value)">
+        <option value="it">🇮🇹 IT</option>
+        <option value="en">🇬🇧 EN</option>
+        <option value="es">🇪🇸 ES</option>
+        <option value="fr">🇫🇷 FR</option>
+    </select>
+
+    <header>
+        <h1 data-it="Misteri del Sud" 
+            data-en="Mysteries of the South"
+            data-es="Misterios del Sur"
+            data-fr="Mystères du Sud">
+            Misteri del Sud
+        </h1>
+        <nav>
+            <a href="#home" data-it="Home" data-en="Home" data-es="Inicio" data-fr="Accueil">Home</a>
+            <a href="#gallery" data-it="Galleria" data-en="Gallery" data-es="Galería" data-fr="Galerie">Galleria</a>
+            <a href="#video" data-it="Video" data-en="Videos" data-es="Videos" data-fr="Vidéos">Video</a>
+            <a href="#contatti" data-it="Contatti" data-en="Contacts" data-es="Contactos" data-fr="Contacts">Contatti</a>
+        </nav>
+    </header>
+
+    <div class="hero" id="home">
+        <h2 data-it="Benvenuto nei Misteri del Sud"
+            data-en="Welcome to the Mysteries of the South"
+            data-es="Bienvenido a los Misterios del Sur"
+            data-fr="Bienvenue aux Mystères du Sud">
+            Benvenuto nei Misteri del Sud
+        </h2>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=60">
+            <h3 data-it="La Triplice Cinta Sacra"
+                data-en="The Sacred Triple Enclosure"
+                data-es="La Triple Cerca Sagrada"
+                data-fr="La Triple Enceinte Sacrée">
+                La Triplice Cinta Sacra
+            </h3>
+            <p data-it="Un antico simbolo inciso in numerose pietre del Sud..."
+               data-en="An ancient symbol engraved on many stones of the South..."
+               data-es="Un antiguo símbolo grabado en muchas piedras del Sur..."
+               data-fr="Un ancien symbole gravé sur de nombreuses pierres du Sud...">
+                Un antico simbolo inciso in numerose pietre del Sud...
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1528747008803-1d73c8c77d79?auto=format&fit=crop&w=800&q=60">
+            <h3 data-it="Il Mistero della Badessa"
+                data-en="The Mystery of the Abbess"
+                data-es="El Misterio de la Abadesa"
+                data-fr="Le Mystère de l’Abbesse">
+                Il Mistero della Badessa
+            </h3>
+            <p data-it="La leggenda narra di un'apparizione nel cuore della notte..."
+               data-en="Legend tells of an apparition deep in the night..."
+               data-es="La leyenda habla de una aparición en plena noche..."
+               data-fr="La légende raconte une apparition au cœur de la nuit...">
+                La leggenda narra di un'apparizione nel cuore della notte...
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        © 2025 Misteri del Sud — All rights reserved
+    </footer>
+
+</body>
+</html>
